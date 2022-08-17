@@ -1,0 +1,10 @@
+
+{{ $mermaidCss := resources.Get "css/mermaid.css" | minify }}
+<link rel="stylesheet" href="{{ $mermaidCss.Permalink }}">
+
+<script defer src="{{"js/mermaid.js" | relURL}}">
+    mermaid.initialize({startOnLoad:true});
+</script>
+<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}" >
+    {{ safeHTML .Inner  }}
+</div>

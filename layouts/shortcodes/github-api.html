@@ -1,0 +1,28 @@
+<ul class="github-api">
+  {{ $url := .Get "url" }}
+  {{ range getJSON $url }}
+    {{ $p := . }}
+    <li>
+      <div class="github-avatar">
+        <img src="{{$p.owner.avatar_url}}" alt="Avatar of {{$p.owner.login}}" title="Avatar of {{$p.owner.login}}">
+      </div>
+      <div class="github-name">
+        <strong>
+          <a href="{{ $p.html_url }}" target="_blank">{{ $p.name | humanize }}</a>
+        </strong>
+      </div>
+        {{/*  {{ $p.full_name }}  */}}
+      <div class="github-description">
+        <p>{{ $p.description }}</p>
+      </div>
+      <div class="github-metadata">
+        <small>
+          Stars: {{$p.stargazers_count}} | Forks: {{$p.forks_count}} | Size: {{$p.size}} {{if $p.archived}}| Archived{{end}}<br>
+          Updated at: {{substr $p.updated_at 0 10}} -  Language: {{$p.language}}
+        </small>
+      </div>
+    </li>
+    {{/*  {{ $p }}  */}}
+    {{ end }}
+ </ul>
+

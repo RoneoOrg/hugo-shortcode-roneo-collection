@@ -3,20 +3,23 @@
 
 See the folder `layouts/shortcodes/` for details
 
-
+Some highlights:
 
 ### Github stars
 
 Display the last starred repo on Github
 
-Usage:
+**Demo**: See [demo.roneo.app](https://demo.roneo.app/hugo-fetch-github-api-shortcode/)
+
+**Usage**:
 
     {{< github-api url="https://api.github.com/users/RoneoOrg/starred" >}}
 
-**Note**: Github API calls are limited and the build breaks when limits are reached.
-Ignore related with `ignoreErrors: error-remote-getjson` in your config file.
+**Note**:
 
-See https://gohugo.io/templates/data-templates/
+Github API calls are limited and the build breaks when limits are reached.
+Ignore related errors with `ignoreErrors: error-remote-getjson` in your config file.
+See also Cache Handling in [Hugo's documentation](https://gohugo.io/templates/data-templates/)
 
 
 ## Installation
@@ -35,7 +38,7 @@ Edit `config.toml`:
 theme = ["hugo-shortcode-roneo-collection", "YourCurrentTheme"]
 enableInlineShortcodes = true
 ```
-To learn more about "Theme components", see [the Hugo documentation](https://gohugo.io/hugo
+To learn more about "Theme components", see [the Hugo documentation](https://gohugo.io/hugo-modules/theme-components)
 
 
 ## Contribute

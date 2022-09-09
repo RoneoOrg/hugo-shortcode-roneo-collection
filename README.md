@@ -7,17 +7,13 @@ Some highlights:
 
 ### Github stars
 
-Display the last starred repo on Github
+Fetch the last starred repo on Github, and for each repo, display the amount of stars and forks, the size of the repo and the last update
 
 **Demo**: See [demo.roneo.app](https://demo.roneo.app/hugo-fetch-github-api-shortcode/)
 
 **Usage**: `{{< github-api url="https://api.github.com/users/RoneoOrg/starred" >}}`
 
-**Note**:
-
-Github API calls are limited and the build breaks when limits are reached.  
-You can ignore related errors with `ignoreErrors: error-remote-getjson` in your config file.  
-See also Cache Handling in [Hugo's documentation](https://gohugo.io/templates/data-templates/)
+**Note**: See [this post](https://roneo.org/en/hugo-fetch-remote-data-github-api-shortcode/) for details
 
 
 ## Installation
@@ -49,4 +45,4 @@ To learn more about "Theme components", see [the Hugo documentation](https://goh
 ## References
 
 -   [Hugo documentation about Theme Components](https://gohugo.io/hugo-modules/theme-components/)
--   Hugo documentation about [Shortcodes](https://gohugo.io/content-management/shortcodes/) 
+-   Hugo documentation about [Shortcodes](https://gohugo.io/content-management/shortcodes/)

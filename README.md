@@ -6,9 +6,12 @@
 
 ### Github stars
 
+**Objective**: Get a list of the last starred repositories on Github, automatically updated every time the website is rebuilt.
+
+**Screenshot:**
+
 ![A screenshot of Github API shortcode for Hugo](https://roneo.org/illustrations/hugo-api-get-users-starred-repo-from-github-api-shortcode.en-img/20220909004638.jpg)
 
-Fetch the last starred repo on Github. For each repo, we display the amount of stars and forks, the size of the repo and the last update
 
 **Demo**: See [demo.roneo.app](https://demo.roneo.app/hugo-fetch-github-api-shortcode/) for live examples.
 
@@ -19,15 +22,15 @@ Fetch the last starred repo on Github. For each repo, we display the amount of s
 
 ## Installation
 
-Install as a Git submodule:
+Install the collection as a Git submodule:
 
-```
+```bash
 git submodule add https://gitlab.com/Roneo/hugo-shortcode-roneo-collection.git themes/hugo-shortcode-roneo-collection
 ```
 
 Then edit your [configuration file](https://gohugo.io/getting-started/configuration/) this way:
 
-```
+```toml
 theme = ["hugo-shortcode-roneo-collection", "YourCurrentTheme"]
 
 enableInlineShortcodes = true

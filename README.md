@@ -1,23 +1,32 @@
 
+
+
+
 ## A shortcode collection for Hugo
 
 
+### Customized text blocks
+
+
+**Objective**: Insert customized text blocks in your posts:
+
+**Screenshot:**
+
+![Include custom messages in your posts with a Shortcode](https://roneo.org/illustrations/hugo-notices-shortcode-show-warning-message.en-img/20220914110145.jpg)
+
+See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shortcode/) for details.
 
 
 ### Github stars
 
-**Objective**: Get a list of the last starred repositories on Github, automatically updated every time the website is rebuilt.
+**Objective**: Display a list of the last starred repositories on Github on your website. This list is automatically updated every time the website is rebuilt.
 
 **Screenshot:**
 
-![A screenshot of Github API shortcode for Hugo](https://roneo.org/illustrations/hugo-api-get-users-starred-repo-from-github-api-shortcode.en-img/20220909004638.jpg)
+![A screenshot of Github API shortcode for Hugo](https://roneo.org/illustrations/hugo-api-get-users-starred-repo-from-github-api-shortcode.en-img/20220914095801.jpg)
 
 
-**Demo**: See [demo.roneo.app](https://demo.roneo.app/hugo-fetch-github-api-shortcode/) for live examples.
-
-**Usage**: `{{< github-api url="https://api.github.com/users/RoneoOrg/starred" >}}`
-
-**Details**: See [the documentation](https://roneo.org/en/hugo-fetch-remote-data-github-api-shortcode/).
+See [the demo](https://demo.roneo.app/hugo-fetch-github-api-shortcode/) for live examples and [the documentation](https://roneo.org/en/hugo-fetch-remote-data-github-api-shortcode/) for guidance.
 
 
 ## Installation

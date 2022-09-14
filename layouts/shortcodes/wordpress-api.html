@@ -1,0 +1,43 @@
+<ul class="wordpress-api">
+  {{ $url := .Get "url" }}
+  {{ range getJSON $url }}
+    {{ $p := . }}
+    {{/* {{ range where $p.categories "=" "1" }} */}}
+    {{/* {{ if eq $p.categories "1" }} */}}
+    <div class="wordpress-article">
+
+      <div class="wordpress-main">
+        <h3>
+          {{ $p.title.rendered | safeHTML | humanize }}
+        </h3>
+      </div>
+
+      <div class="wordpress-content">
+        {{ $p.content.rendered | safeHTML }}
+      </div>
+
+      <div class="wordpress-metadata">
+
+        Date:
+        {{substr $p.modified 0 10 | time.Format ":date_long" }}
+
+        {{/*  Long:
+          {{ $p.date }}  */}}
+
+        <a href="{{ $p.link }}">Permalink</a>
+        <p>
+          Attachments:
+          {{/* {{ $p._links.wp:attachment.href }} */}}
+
+        </p>
+
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    {{/*  {{ $p }}  */}}
+    {{ end }}
+    {{/* {{ end }} */}}
+  </ul>

@@ -1,5 +1,5 @@
 {{/* Available box types: warning, info, important, tip */}}
-{{- $boxType := .Get 0 -}}
+{{- $boxType := .Get 0 | default "info" -}}
 
 {{/* Workaround markdownify inconsistency for single/multiple paragraphs */}}
 {{- $raw := (markdownify .Inner | chomp) -}}

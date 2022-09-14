@@ -12,14 +12,12 @@
     .notice {
       padding: 18px;
       line-height: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 4em;
       border-radius: 4px;
       color: #444;
-      background: #e7f2fa;
+      background: #f3ebe850;
     }
-    .notice p:last-child {
-      margin-bottom: 0;
-    }
+
     .notice-title {
       margin: -18px -18px 12px;
       padding: 4px 18px;
@@ -29,28 +27,28 @@
       background: #6ab0de;
     }
     .notice.warning .notice-title {
-      background: rgba(217, 83, 79, 0.9);
+      background: #ff6b6b;
     }
     .notice.warning {
-      background: #fae2e2;
+      background: #ff6b6b4f;
     }
     .notice.info .notice-title {
-      background: #f0b37e;
-    }
-    .notice.info {
-      background: #fff2db;
-    }
-    .notice.note .notice-title {
       background: #6ab0de;
     }
+    .notice.info {
+      background: #6ab0de2b;
+    }
+    .notice.note .notice-title {
+      background: #f7ec2c;
+    }
     .notice.note {
-      background: #e7f2fa;
+      background: #f7ec2c7d;
     }
     .notice.tip .notice-title {
-      background: rgba(92, 184, 92, 0.8);
+      background: #00ff00;
     }
     .notice.tip {
-      background: #e6f9e6;
+      background: #00ff0045;
     }
     .icon-notice {
       display: inline-flex;
@@ -67,6 +65,18 @@
     .icon-notice.baseline svg {
       top: 0.125em;
       position: relative;
+    }
+    .notice p {
+      margin-bottom: 0.6em;
+    }
+    .notice p:first-of-type {
+      display: inline;
+    }
+    .notice p:nth-of-type(2) {
+      margin-top: 0.6em;
+    }
+    .notice p:last-child {
+      margin-bottom: 0;
     }
   </style>
 
@@ -105,5 +115,17 @@
     {{ $raw }}
   {{ else }}
     <p>{{ $raw }}</p>
+  {{ end -}}
+</div>
+
+{{- $.Page.Scratch.Add "noticecount" 1 -}}
+<div class="notice {{ $noticeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}"{{ end }}>
+  <span class="icon-notice baseline">
+    <svg><use href="#{{- $noticeType -}}-notice"></use></svg>
+  </span>
+  {{- if or $block (not $raw) }}
+    {{ $raw }}
+  {{ else }}
+    {{ $raw }}
   {{ end -}}
 </div>

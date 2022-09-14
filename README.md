@@ -8,7 +8,7 @@
 ### Customized text blocks
 
 
-**Objective**: Insert customized text blocks in your posts:
+**Objective**: Insert customized text blocks in your posts
 
 **Screenshot:**
 

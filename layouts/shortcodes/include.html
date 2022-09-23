@@ -1,4 +1,4 @@
-<!-- Source: Beautifulhugo -->
+<!-- Source: https://roneo.org/en/hugo-include-another-file-with-a-shortcode/ -->
 
 {{ $file := .Get 0 }}
 {{ (printf "%s%s" .Page.File.Dir $file) | readFile | replaceRE "^---[\\s\\S]+?---" "" | safeHTML }}

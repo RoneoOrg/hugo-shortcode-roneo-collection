@@ -13,6 +13,8 @@
     {{ $item = . }}
 {{ end }}
 
+{{ $theme := $theme | default "regular" }}
+
 {{ warnf "themeAfterLoop: %s" $theme }}
 
 {{ $class := "" }}

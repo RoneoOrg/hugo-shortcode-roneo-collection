@@ -16,6 +16,8 @@
 
 #### Usage
 
+As a shortcode:
+
     {{</* ico star */>}}
     {{< ico moon solid >}}
     {{< ico creative-commons brands >}}
@@ -26,6 +28,9 @@ With named parameters:
     {{< ico icon="star" theme="regular" >}}
     {{< ico icon="creative-commons" theme="brands" >}}
 
+As a partial:
+
+    {{ partial "ico" "download" }}
 
 
 ### Customized text blocks

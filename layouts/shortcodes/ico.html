@@ -1,0 +1,43 @@
+
+
+{{- $icon := "" -}}
+{{- $theme := "" -}}
+{{- $class := "" -}}
+{{- $href := "" -}}
+
+
+{{/* Count how many times we've called this shortcode and load the css if it's the first time */}}
+{{- if not ($.Page.Scratch.Get "ico_count") -}}
+  <style>
+      .ico {
+        height: 1em;
+        width: 1em;
+      }
+
+
+  </style>
+{{- end -}}
+{{- $.Page.Scratch.Add "ico_count" 1 -}}
+
+
+{{- if .IsNamedParams }}
+    {{- $icon = .Get "icon" -}}
+    {{- $theme = (.Get "theme" |  default "solid") -}}
+    {{- $class = .Get "class" -}}
+    {{- $href = .Get "href" -}}
+{{- else }}
+    {{- $icon = .Get 0 -}}
+    {{- $theme = (.Get 1 |  default "solid") -}}
+    {{- $class = .Get 2 -}}
+    {{- $href = .Get 3 -}}
+{{- end }}
+
+{{- if not $icon }}
+{   {- errorf "Missing required 'icon'. Shortcode: 'ico'." -}}
+{{- end }}
+
+{{ with .Page.Resources.GetMatch $icon }}
+    {{ $icon = . }}
+{{ end }}
+
+{{ partial "ico" (dict "icon" $icon "theme" $theme "class" $class "href" $href) }}

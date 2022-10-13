@@ -5,6 +5,44 @@
 ## A shortcode collection for Hugo
 
 
+### Icon Shortcode
+
+
+#### Features
+
+- 1600 icons from Font Awesome 5
+- Lightweight: 1.6 Mo
+
+
+#### Usage
+
+    {{</* ico star */>}}
+    {{< ico moon solid >}}
+    {{< ico creative-commons brands >}}
+
+With named parameters:
+
+    {{< ico icon="star" >}}
+    {{< ico icon="star" theme="regular" >}}
+    {{< ico icon="creative-commons" theme="brands" >}}
+
+
+
+####  Installation
+
+    hugo mod init roneo
+    hugo mod get github.com/UtkarshVerma/hugo-modules/svg-icon-system
+    hugo mod vendor
+
+Add to `config.yml`:
+
+```
+module:
+  imports:
+    - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
+```
+
+
 ### Customized text blocks
 
 

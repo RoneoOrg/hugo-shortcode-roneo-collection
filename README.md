@@ -33,21 +33,6 @@ As a partial:
     {{ partial "ico" "download" }}
 
 
-####  Installation
-
-    hugo mod init roneo
-    hugo mod get github.com/UtkarshVerma/hugo-modules/svg-icon-system
-    hugo mod vendor
-
-Add to `config.yml`:
-
-```
-module:
-  imports:
-    - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
-```
-
-
 ### Customized text blocks
 
 
@@ -102,5 +87,5 @@ Please open an issue on [Github](https://github.com/RoneoOrg/hugo-shortcode-rone
 
 ## References
 
--   [Hugo documentation about Theme Components](https://gohugo.io/hugo-modules/theme-components/)
--   Hugo documentation about [Shortcodes](https://gohugo.io/content-management/shortcodes/)
+- [Hugo documentation about Theme Components](https://gohugo.io/hugo-modules/theme-components/)
+- Hugo documentation about [Shortcodes](https://gohugo.io/content-management/shortcodes/)

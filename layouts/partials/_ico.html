@@ -7,7 +7,7 @@
 {{ if reflect.IsMap . }}
     {{ $item = .icon }}
     {{ $theme = .theme }}
-    {{ warnf "themeInsideMap: %s" $theme }}
+    {{/*  {{ warnf "themeInsideMap: %s" $theme }}  */}}
     {{ $title = .title }}
   {{ else }}
     {{ $item = . }}
@@ -15,7 +15,7 @@
 
 {{ $theme := $theme | default "regular" }}
 
-{{ warnf "themeAfterLoop: %s" $theme }}
+{{/*  {{ warnf "themeAfterLoop: %s" $theme }}  */}}
 
 {{ $class := "" }}
 {{ $file := "" }}
@@ -28,14 +28,14 @@
 {{ else if eq (printf "%T" $item) "string" }}
 
     {{ $folder := $theme }}
-    {{ warnf "themeToFolder: %s" $theme }}
-    {{ warnf "folderFromTheme : %s" $folder }}
+    {{/*  {{ warnf "themeToFolder: %s" $theme }}  */}}
+    {{/*  {{ warnf "folderFromTheme : %s" $folder }}  */}}
 
     {{ $class = print $item " ico icon" }}
     {{ $path := printf "svg/fontawesome/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
-    {{ warnf "file: %s" $item }}
-    {{ warnf "theme: %s" $theme }}
+    {{ warnf "Loading icon from ico.html: %s" $item }}
+    {{/*  {{ warnf "theme: %s" $theme }}  */}}
 
 {{ else }}
     {{/*  Get the filename, remove extension, add custom classes  */}}

@@ -1,5 +1,58 @@
-<!-- Source: Beautifulhugo -->
+
+
+{{/* Count how many times we've called this shortcode and load the css if it's the first time */}}
+{{- if not ($.Page.Scratch.Get "count_details") -}}
+    <style>
+        details summary {
+          min-width: 200px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+
+        details summary > * {
+          display: inline;
+        }
+
+        details {
+          margin: 1em;
+          border-radius: 5px;
+          padding: 1em;
+          overflow: hidden;
+          box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+        }
+
+        summary {
+          padding: 0 1rem 0 1rem;
+          display: block;
+          position: relative;
+          cursor: pointer;
+        }
+
+        summary:before {
+          content: '+';
+          position: absolute;
+          top: .1rem;
+          left: 0.1rem;
+          transform: rotate(0);
+          /* transform-origin: .2rem 50%; */
+          transition: .3s transform ease;
+        }
+
+        /* THE MAGIC 🧙‍♀️ */
+        details[open] > summary:before {
+          transform: rotate(180deg);
+          content: '-';
+        }
+
+        details summary::-webkit-details-marker {
+          display:none;
+        }
+
+    </style>
+{{- end -}}
+{{- $.Page.Scratch.Add "count_details" 1 -}}
+
 
 <details><summary>{{ .Get 0 | markdownify }}</summary>
   {{ .Inner | markdownify }}
-  </details>
+</details>

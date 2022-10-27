@@ -8,29 +8,21 @@
 ### Icon Shortcode
 
 
-#### Features
-
-- 1600 icons from Font Awesome 5
-- Lightweight: 1.6 Mo
-
-
 #### Usage
 
 As a shortcode:
 
-    {{</* ico star */>}}
+    {{< ico moon >}}
     {{< ico moon solid >}}
-    {{< ico creative-commons brands >}}
 
 With named parameters:
 
-    {{< ico icon="star" >}}
-    {{< ico icon="star" theme="regular" >}}
-    {{< ico icon="creative-commons" theme="brands" >}}
+    {{< ico icon="moon" >}}
+    {{< ico icon="moon" theme="solid" >}}
 
 As a partial:
 
-    {{ partial "ico" "download" }}
+    {{ partial "ico" "moon" }}
 
 
 ### Customized text blocks

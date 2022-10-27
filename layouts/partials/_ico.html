@@ -13,7 +13,7 @@
     {{ $item = . }}
 {{ end }}
 
-{{ $theme := $theme | default "regular" }}
+{{ $theme := $theme | default "default" }}
 
 {{/*  {{ warnf "themeAfterLoop: %s" $theme }}  */}}
 
@@ -32,7 +32,7 @@
     {{/*  {{ warnf "folderFromTheme : %s" $folder }}  */}}
 
     {{ $class = print $item " ico icon" }}
-    {{ $path := printf "svg/fontawesome/%s/%s.svg" $folder $item }}
+    {{ $path := printf "svg/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
     {{ warnf "Loading icon from ico.html: %s" $item }}
     {{/*  {{ warnf "theme: %s" $theme }}  */}}

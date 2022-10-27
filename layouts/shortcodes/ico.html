@@ -22,12 +22,12 @@
 
 {{- if .IsNamedParams }}
     {{- $icon = .Get "icon" -}}
-    {{- $theme = (.Get "theme" |  default "solid") -}}
+    {{- $theme = (.Get "theme" |  default "default") -}}
     {{- $class = .Get "class" -}}
     {{- $href = .Get "href" -}}
 {{- else }}
     {{- $icon = .Get 0 -}}
-    {{- $theme = (.Get 1 |  default "solid") -}}
+    {{- $theme = (.Get 1 |  default "default") -}}
     {{- $class = .Get 2 -}}
     {{- $href = .Get 3 -}}
 {{- end }}

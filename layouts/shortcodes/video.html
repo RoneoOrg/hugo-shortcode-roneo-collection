@@ -1,5 +1,12 @@
-<video class="video" preload="{{ .Get "preload" }}" controls>
-    <source src="{{ .Get "src" }}" type="{{ .Get "type" }}">
-    There should have been a video here but your browser does not seem
-    to support it.
-</video>
+{{/* Source: https://gitlab.com/Roneo/hugo-shortcode-roneo-audio-player */}}
+
+<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
+  <video controls class="player" preload="{{ .Get "preload" | default "metadata" }}">
+    {{ with .Get "src" }}<source src="{{ . | relURL }}">{{ end }}
+    <p>
+      Votre navigateur ne prend pas en charge les vidéos HTML5.
+      {{ with .Get "src" }}Voici <a href="{{ . | relURL }}">">un lien pour télécharger la vidéo</a>.{{ end }}
+    </p>
+  </video>
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

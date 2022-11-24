@@ -1,5 +1,7 @@
+{{/*  Source: https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
+
 {{/*  Check if the shortcode was already loaded on this page and load CSS only the first time  */}}
-{{- if not ($.Page.Scratch.Get "columncount") -}}
+{{- if not ($.Page.Scratch.Get "column_count") -}}
   <style>
       div.splitbox {width:100%; overflow:auto;}
 
@@ -21,6 +23,6 @@
   </style>
 {{- end -}}
 
-{{- $.Page.Scratch.Add "columncount" 1 -}}
+{{- $.Page.Scratch.Add "column_count" 1 -}}
 
 <div class="splitbox"><div class="left">

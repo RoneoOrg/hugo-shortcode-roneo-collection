@@ -1,7 +1,7 @@
-
+{{/*  Source:https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
 
 {{/* Count how many times we've called this shortcode and load the css if it's the first time */}}
-{{- if not ($.Page.Scratch.Get "count_details") -}}
+{{- if not ($.Page.Scratch.Get "details_count") -}}
     <style>
         details summary {
           min-width: 200px;
@@ -50,7 +50,7 @@
 
     </style>
 {{- end -}}
-{{- $.Page.Scratch.Add "count_details" 1 -}}
+{{- $.Page.Scratch.Add "details_count" 1 -}}
 
 
 <details><summary>{{ .Get 0 | markdownify }}</summary>

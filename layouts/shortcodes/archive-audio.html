@@ -11,6 +11,8 @@
 {{- $identifier := $dataJ.metadata.identifier -}}
 {{- $root := "https://archive.org/download" -}}
 
+{{ "<!-- Shortcode 'archive-audio.html' -->" | safeHTML }}
+
 <ul class="treeview">
 {{ range $dataJ.files }}
 
@@ -47,4 +49,3 @@
     {{ end }}
 {{ end }}
 </ul>
-{{/*  {{ end }}  */}}

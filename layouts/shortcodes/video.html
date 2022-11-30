@@ -1,12 +1,33 @@
-{{/* Source: https://gitlab.com/Roneo/hugo-shortcode-roneo-audio-player */}}
+{{/*  Source: https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
 
-<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-  <video controls class="player" preload="{{ .Get "preload" | default "metadata" }}" data-poster="{{ .Get "poster" }}">
-    {{ with .Get "src" }}<source src="{{ . | relURL }}">{{ end }}
+{{- $src := "" -}}
+{{- $caption := "" -}}
+{{- $poster := "" -}}
+{{- $class := "" -}}
+{{- $preload := "" -}}
+
+{{- if .IsNamedParams }}
+    {{- $src = .Get "src" -}}
+    {{- $caption = .Get "caption" -}}
+    {{- $poster = .Get "poster" -}}
+    {{- $class = .Get "class" -}}
+    {{- $preload = .Get "preload" | default "metadata" -}}
+{{- else }}
+    {{- $src = .Get 0 -}}
+    {{- $caption = .Get 1 -}}
+    {{- $poster = .Get 2 -}}
+    {{- $class = .Get 3 -}}
+    {{- $preload = .Get 4 -}}
+{{- end }}
+
+<figure {{ with $class }}class="{{ . }}"{{ end }}>
+  <video controls class="player" preload="{{ $preload }}" data-poster="{{ $poster }}">
+    {{ with $src }}<source src="{{ . | relURL }}">{{ end }}
     <p>
-      Votre navigateur ne prend pas en charge les vidéos HTML5.
-      {{ with .Get "src" }}Voici <a href="{{ . | relURL }}">">un lien pour télécharger la vidéo</a>.{{ end }}
+      Your browser does not support HTML5 video.
+      {{ with $src }}Here is <a href="{{ . | relURL }}">">a link to download the video</a>.{{ end }}
     </p>
   </video>
-  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+  {{/*  <a href="{{ .Get "src"  }}" class="button small" download><i class="icon fas fa-download"></i></a>  */}}
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
 </figure>

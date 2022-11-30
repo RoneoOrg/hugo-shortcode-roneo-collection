@@ -24,6 +24,25 @@ As a partial:
 
     {{ partial "ico" "moon" }}
 
+#### Embed video file
+
+Usage
+
+    {{< video "https://archive.org/download/tesfile.mp4" >}}
+
+
+Options are available. Here we define a caption
+
+```go
+{{< audio "/testfile.mp4" "A custom caption" >}}
+```
+
+Named parameters can be used too:
+
+```go
+{{< audio src="/test-file.mp4" caption="A custom comment"  poster="preview-image.jpg" class="foo" preload="none" >}}
+```
+
 
 ### Customized text blocks
 

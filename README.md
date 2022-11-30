@@ -24,7 +24,28 @@ As a partial:
 
     {{ partial "ico" "moon" }}
 
-#### Embed video file
+### Embed audio file
+
+**Objective:** easily **insert audio players from local and remote files**
+
+#### Usage
+
+```
+{{<audio "https://archive.org/download/test/aufiofile.mp3" >}}
+```
+
+#### Screenshot
+
+<div align="center">
+
+![Screenshot of the audio Shortcode in action](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection/-/raw/main/img/screenshot.jpg)
+
+</div>
+
+This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the installation and features
+
+
+### Embed video file
 
 Usage
 
@@ -66,7 +87,7 @@ Usage:
 
 Demo: See https://phoni.es/dev/v4/
 
-### Github stars
+### List Github stars
 
 **Objective**: Display a list of the last starred repositories on Github on your website. This list is automatically updated every time the website is rebuilt.
 

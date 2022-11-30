@@ -1,7 +1,7 @@
 {{/* Source: https://gitlab.com/Roneo/hugo-shortcode-roneo-audio-player */}}
 
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-  <video controls class="player" preload="{{ .Get "preload" | default "metadata" }}">
+  <video controls class="player" preload="{{ .Get "preload" | default "metadata" }}" data-poster="{{ .Get "poster" }}">
     {{ with .Get "src" }}<source src="{{ . | relURL }}">{{ end }}
     <p>
       Votre navigateur ne prend pas en charge les vidéos HTML5.

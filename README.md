@@ -82,7 +82,7 @@ Please open an issue on [Github](https://github.com/RoneoOrg/hugo-shortcode-rone
 
 ## Contribute
 
-**Code contributions are welcome**, and the main place for development is [this Gitlab repo](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection). You can use[this Github repo](https://github.com/RoneoOrg/hugo-shortcode-roneo-collection) too.
+**Code contributions are welcome**, and the main place for development is [this Gitlab repo](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection). You can use [this Github repo](https://github.com/RoneoOrg/hugo-shortcode-roneo-collection) too.
 
 **Please star this repo** on [Github](https://github.com/RoneoOrg/hugo-shortcode-roneo-collection) or [Gitlab](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection), to help this project gain some visibility and reach new contributors.
 

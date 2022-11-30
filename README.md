@@ -26,13 +26,20 @@ As a partial:
 
 ### Embed audio file
 
-**Objective:** easily **insert audio players from local and remote files**
+**Mission:** easily embed players from local and remote audio files
 
-#### Usage
+Usage:
 
 ```
-{{<audio "https://archive.org/download/test/aufiofile.mp3" >}}
+{{< audio "https://archive.org/download/test/aufiofile.mp3" >}}
 ```
+Screenshot:
+
+<div align="center">
+
+![Screenshot of the audio Shortcode in action](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection/-/raw/main/img/screenshot.jpg)
+
+</div>
 
 Options are available. Here we define a caption
 
@@ -46,20 +53,15 @@ Named parameters can be used too:
 {{< audio src="/audiofilename.mp3" caption="A custom comment" class="foo" preload="none" >}}
 ```
 
-#### Screenshot
-
-<div align="center">
-
-![Screenshot of the audio Shortcode in action](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection/-/raw/main/img/screenshot.jpg)
-
-</div>
-
 This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the installation and features
 
 
 ### Embed video file
 
-Usage
+**Mission:** easily embed players from local and remote video files
+
+
+Usage:
 
     {{< video "https://archive.org/download/tesfile.mp4" >}}
 
@@ -67,22 +69,26 @@ Usage
 Options are available. Here we define a caption:
 
 ```go
-{{< audio "/testfile.mp4" "A custom caption" >}}
+{{< video "/testfile.mp4" "A custom caption" >}}
 ```
 
 Named parameters can be used too:
 
 ```go
-{{< audio src="/test-file.mp4" caption="A custom comment"  poster="preview-image.jpg" class="foo" preload="none" >}}
+{{< video src="/test-file.mp4" caption="A custom comment"  poster="preview-image.jpg" class="foo" preload="none" >}}
 ```
-
 
 ### Customized text blocks
 
+Usage:
 
-**Objective**: Insert customized text blocks in your posts
+```
+{{< box info >}}
+  Incididunt labore eiusmod culpa eu nostrud tempor laborum consequat eiusmod excepteur.
+{{< /box >}}
+```
 
-**Screenshot:**
+Screenshot:
 
 ![Include custom messages in your posts with a Shortcode](https://roneo.org/illustrations/hugo-notices-shortcode-show-warning-message.en-img/20220914110145.jpg)
 
@@ -91,7 +97,7 @@ See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shor
 
 ### List audio files from Archive.org
 
-Display a list of audio files from a specified folder on Archive.org.
+**Mission:** Display a list of audio files from a specified folder on Archive.org.
 
 Usage:
 
@@ -101,7 +107,7 @@ Demo: See https://phoni.es/dev/v4/
 
 ### List Github stars
 
-**Objective**: Display a list of the last starred repositories on Github on your website. This list is automatically updated every time the website is rebuilt.
+**Mission**: Display a list of the last starred repositories on Github on your website. This list is automatically updated every time the website is rebuilt.
 
 **Screenshot:**
 

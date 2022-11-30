@@ -44,6 +44,7 @@ Named parameters can be used too:
 
 ```go
 {{< audio src="/audiofilename.mp3" caption="A custom comment" class="foo" preload="none" >}}
+```
 
 #### Screenshot
 
@@ -63,7 +64,7 @@ Usage
     {{< video "https://archive.org/download/tesfile.mp4" >}}
 
 
-Options are available. Here we define a caption
+Options are available. Here we define a caption:
 
 ```go
 {{< audio "/testfile.mp4" "A custom caption" >}}

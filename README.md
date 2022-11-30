@@ -34,6 +34,17 @@ As a partial:
 {{<audio "https://archive.org/download/test/aufiofile.mp3" >}}
 ```
 
+Options are available. Here we define a caption
+
+```go
+{{< audio "/audiofilename.mp3" "A custom comment" >}}
+```
+
+Named parameters can be used too:
+
+```go
+{{< audio src="/audiofilename.mp3" caption="A custom comment" class="foo" preload="none" >}}
+
 #### Screenshot
 
 <div align="center">

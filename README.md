@@ -37,6 +37,16 @@ As a partial:
 See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shortcode/) for details.
 
 
+### List audio files from Archive.org
+
+Display a list of audio files from a specified folder on Archive.org.
+
+Usage:
+
+    {{< archive-audio "https://archive.org/details/heyamoli" >}}
+
+Demo: See https://phoni.es/dev/v4/
+
 ### Github stars
 
 **Objective**: Display a list of the last starred repositories on Github on your website. This list is automatically updated every time the website is rebuilt.

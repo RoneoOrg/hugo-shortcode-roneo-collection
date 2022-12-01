@@ -56,6 +56,16 @@ Named parameters can be used too:
 This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the installation and features
 
 
+### Embed multiple audio files from Archive.org
+
+Usage:
+
+    {{< archive-audio "https://archive.org/details/heyamoli" >}}
+
+Demo: See https://phoni.es/dev/v4/
+
+
+
 ### Embed video file
 
 **Mission:** easily embed players from local and remote video files
@@ -94,16 +104,6 @@ Screenshot:
 
 See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shortcode/) for details.
 
-
-### List audio files from Archive.org
-
-**Mission:** Display a list of audio files from a specified folder on Archive.org.
-
-Usage:
-
-    {{< archive-audio "https://archive.org/details/heyamoli" >}}
-
-Demo: See https://phoni.es/dev/v4/
 
 ### List Github stars
 

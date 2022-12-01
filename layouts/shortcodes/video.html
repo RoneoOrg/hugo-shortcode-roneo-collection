@@ -17,7 +17,7 @@
     {{- $caption = .Get 1 -}}
     {{- $poster = .Get 2 -}}
     {{- $class = .Get 3 -}}
-    {{- $preload = .Get 4 -}}
+    {{- $preload = .Get 4 | default "metadata" -}}
 {{- end }}
 
 {{ "<!-- Shortcode 'video.html' -->" | safeHTML }}

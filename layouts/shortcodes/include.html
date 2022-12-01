@@ -1,4 +1,4 @@
-<!-- Source: https://roneo.org/en/hugo-include-another-file-with-a-shortcode/ -->
+{{/*  Source:https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
 
 {{ $file := .Get 0 }}
 {{ (printf "%s%s" .Page.File.Dir $file) | readFile | replaceRE "^---[\\s\\S]+?---" "" | safeHTML }}

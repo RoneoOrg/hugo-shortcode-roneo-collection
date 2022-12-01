@@ -1,5 +1,35 @@
-<video class="video" preload="{{ .Get "preload" }}" controls>
-    <source src="{{ .Get "src" }}" type="{{ .Get "type" }}">
-    There should have been a video here but your browser does not seem
-    to support it.
-</video>
+{{/*  Source: https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
+
+{{- $src := "" -}}
+{{- $caption := "" -}}
+{{- $poster := "" -}}
+{{- $class := "" -}}
+{{- $preload := "" -}}
+
+{{- if .IsNamedParams }}
+    {{- $src = .Get "src" -}}
+    {{- $caption = .Get "caption" -}}
+    {{- $poster = .Get "poster" -}}
+    {{- $class = .Get "class" -}}
+    {{- $preload = .Get "preload" | default "metadata" -}}
+{{- else }}
+    {{- $src = .Get 0 -}}
+    {{- $caption = .Get 1 -}}
+    {{- $poster = .Get 2 -}}
+    {{- $class = .Get 3 -}}
+    {{- $preload = .Get 4 | default "metadata" -}}
+{{- end }}
+
+{{ "<!-- Shortcode 'video.html' -->" | safeHTML }}
+
+<figure {{ with $class }}class="{{ . }}"{{ end }}>
+  <video controls class="player" preload="{{ $preload }}" data-poster="{{ $poster }}">
+    {{ with $src }}<source src="{{ . | relURL }}">{{ end }}
+    <p>
+      Your browser does not support HTML5 video.
+      {{ with $src }}Here is <a href="{{ . | relURL }}">">a link to download the video</a>.{{ end }}
+    </p>
+  </video>
+  {{/*  <a href="{{ .Get "src"  }}" class="button small" download><i class="icon fas fa-download"></i></a>  */}}
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

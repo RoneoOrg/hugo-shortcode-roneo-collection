@@ -1,6 +1,21 @@
 {{/*  Source:https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
 
+{{- $title := "" -}}
+{{- $theme := "" -}}
+{{- $class := "" -}}
+
+
+{{- if .IsNamedParams }}
+    {{- $title = .Get "title" -}}
+    {{- $theme = (.Get "theme" |  default "default") -}}
+    {{- $class = .Get "class" -}}
+{{- else }}
+    {{- $title = .Get 0 -}}
+    {{- $theme = (.Get 1 |  default "default") -}}
+    {{- $class = .Get 2 -}}
+{{- end }}
+
 <div>
-    <h2>Table Of Contents</h2>
+    <h2>{{ $title }}</h2>
     {{ .Page.TableOfContents }}
 </div>

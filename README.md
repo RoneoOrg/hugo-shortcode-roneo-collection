@@ -53,7 +53,7 @@ Named parameters can be used too:
 {{< audio src="/audiofilename.mp3" caption="A custom comment" class="foo" preload="none" >}}
 ```
 
-This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the installation and features
+This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
 
 
 ### Embed multiple audio files from Archive.org
@@ -87,6 +87,8 @@ Named parameters can be used too:
 ```go
 {{< video src="/test-file.mp4" caption="A custom comment"  poster="preview-image.jpg" class="foo" preload="none" >}}
 ```
+
+This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
 
 ### Customized text blocks
 

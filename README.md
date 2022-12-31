@@ -121,19 +121,9 @@ See [the demo](https://demo.roneo.app/hugo-fetch-github-api-shortcode/) for live
 
 ## Installation
 
-Install the collection as a Git submodule:
 
-```bash
-git submodule add https://gitlab.com/Roneo/hugo-shortcode-roneo-collection.git themes/hugo-shortcode-roneo-collection
-```
+See the [dedicated documentation](https://roneo.org/en/hugo-install-shortcode-collection/).
 
-Then edit your [configuration file](https://gohugo.io/getting-started/configuration/) this way:
-
-```toml
-theme = ["hugo-shortcode-roneo-collection", "YourCurrentTheme"]
-
-enableInlineShortcodes = true
-```
 
 ## Found a problem?
 

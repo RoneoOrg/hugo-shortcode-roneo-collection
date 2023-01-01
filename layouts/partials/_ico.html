@@ -53,8 +53,8 @@
 {{ $pattern := `[\s\S]*?<svg([\s\S]*)?>([\s\S]*)(<title>[\s\S]*</title>)?([\s\S]*)</svg>([\s\S]*)?` }}
 {{ $replaceWith := "" }}
 {{ with $title }}
-    {{ $replaceWith = printf `<svg class="%s" ${1}>${2}<title>%s</title>${4}</svg>` $classes . }}
+    {{ $replaceWith = printf `<svg aria-hidden="true" class="%s" ${1}>${2}<title>%s</title>${4}</svg>` $classes . }}
 {{ else }}
-    {{ $replaceWith = printf `<svg class="%s" ${1}>${2}${3}${4}</svg>` $classes }}
+    {{ $replaceWith = printf `<svg aria-hidden="true" class="%s" ${1}>${2}${3}${4}</svg>` $classes }}
 {{ end }}
 {{ return ($content | replaceRE $pattern $replaceWith | safeHTML) }}

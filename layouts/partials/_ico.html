@@ -7,6 +7,7 @@
 {{ if reflect.IsMap . }}
     {{ $item = .icon }}
     {{ $theme = .theme }}
+    {{ $class = .class }}
     {{/*  {{ warnf "themeInsideMap: %s" $theme }}  */}}
     {{ $title = .title }}
   {{ else }}
@@ -14,10 +15,10 @@
 {{ end }}
 
 {{ $theme := $theme | default "default" }}
+{{ $classes := "" }}
 
 {{/*  {{ warnf "themeAfterLoop: %s" $theme }}  */}}
 
-{{ $class := "" }}
 {{ $file := "" }}
 
 {{/*  ?? Check data type ? See https://www.brijumaquio.com/get-data-type-in-hugo-framework  */}}
@@ -31,7 +32,7 @@
     {{/*  {{ warnf "themeToFolder: %s" $theme }}  */}}
     {{/*  {{ warnf "folderFromTheme : %s" $folder }}  */}}
 
-    {{ $class = printf "%v%v%v" $theme " ico icon " $item }}
+    {{ $classes = printf "%v%v%v%v%v" $theme " ico icon " $item " " $class }}
     {{ $path := printf "svg/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
     {{/*  {{ warnf "Loading icon from ico.html: %s" $item }}  */}}
@@ -39,7 +40,7 @@
 
 {{ else }}
     {{/*  Get the filename, remove extension, add custom classes  */}}
-    {{ $class = print (replace (path.Base $item) ".svg" "" | anchorize) " ico icon" }}
+    {{ $classes = print (replace (path.Base $item) ".svg" "" | anchorize) " ico icon" }}
     {{ $file = resources.Get $item }}
 {{ end }}
 
@@ -52,8 +53,8 @@
 {{ $pattern := `[\s\S]*?<svg([\s\S]*)?>([\s\S]*)(<title>[\s\S]*</title>)?([\s\S]*)</svg>([\s\S]*)?` }}
 {{ $replaceWith := "" }}
 {{ with $title }}
-    {{ $replaceWith = printf `<svg class="%s" ${1}>${2}<title>%s</title>${4}</svg>` $class . }}
+    {{ $replaceWith = printf `<svg class="%s" ${1}>${2}<title>%s</title>${4}</svg>` $classes . }}
 {{ else }}
-    {{ $replaceWith = printf `<svg class="%s" ${1}>${2}${3}${4}</svg>` $class }}
+    {{ $replaceWith = printf `<svg class="%s" ${1}>${2}${3}${4}</svg>` $classes }}
 {{ end }}
 {{ return ($content | replaceRE $pattern $replaceWith | safeHTML) }}

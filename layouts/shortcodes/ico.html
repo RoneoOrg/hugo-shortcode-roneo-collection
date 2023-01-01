@@ -9,9 +9,22 @@
 {{/* Count how many times we've called this shortcode and load the css if it's the first time */}}
 {{- if not ($.Page.Scratch.Get "ico_count") -}}
   <style>
+
       .ico {
         height: 1em;
         width: 1em;
+        position: relative;
+        top: 3px;
+      }
+
+      .ico-md .ico {
+        height: 1.5em;
+        width: 1.5em;
+      }
+
+      .ico-xl .ico {
+        height: 2em;
+        width: 2em;
       }
 
 

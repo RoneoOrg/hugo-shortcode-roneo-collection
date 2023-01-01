@@ -7,22 +7,24 @@
 
 ### Icon Shortcode
 
+Easily insert icons in Hugo pages and templates.  
+More than 3000 open source SVG icons are available out-of-the-box.
 
 #### Usage
 
 As a shortcode:
 
     {{< ico moon >}}
-    {{< ico moon solid >}}
+    {{< ico star solid >}}
 
 With named parameters:
 
-    {{< ico icon="moon" >}}
-    {{< ico icon="moon" theme="solid" >}}
+    {{< ico icon="star" >}}
+    {{< ico icon="star" theme="solid" >}}
 
 As a partial:
 
-    {{ partial "ico" "moon" }}
+    {{ partial "ico" "star" }}
 
 ### Embed audio file
 

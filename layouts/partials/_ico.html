@@ -35,7 +35,7 @@
     {{ $classes = printf "%v%v%v%v%v" $theme " ico icon " $item " " $class }}
     {{ $path := printf "svg/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
-    {{/*  {{ warnf "Loading icon from ico.html: %s" $item }}  */}}
+    {{ warnf "Loading icon from ico.html shortcode: %s" $item }}
     {{/*  {{ warnf "theme: %s" $theme }}  */}}
 
 {{ else }}

@@ -35,7 +35,7 @@
     {{ $classes = printf "%v%v%v%v%v" $theme " ico ico-" $item " " $class }}
     {{ $path := printf "svg/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
-    {{ warnf "Loading icon from ico.html shortcode: %s" $item }}
+    {{/*  {{ warnf "Loading icon from ico.html shortcode: %s" $item }}  */}}
     {{/*  {{ warnf "theme: %s" $theme }}  */}}
 
 {{ else }}
@@ -45,7 +45,7 @@
 {{ end }}
 
 {{ if eq $file nil }}
-    {{ warnf "Icon not found: %s" $file }}
+    {{ warnf "Error detected in ico shortcode: Icon not found: %s" $file }}
     {{ return }}
 {{ end }}
 

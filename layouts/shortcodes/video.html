@@ -23,7 +23,7 @@
 {{ "<!-- Shortcode 'video.html' -->" | safeHTML }}
 
 <figure {{ with $class }}class="{{ . }}"{{ end }}>
-  <video controls class="player" preload="{{ $preload }}" data-poster="{{ $poster }}">
+  <video playsinline controls class="player" preload="{{ $preload }}" data-poster="{{ $poster }}">
     {{ with $src }}<source src="{{ . | relURL }}">{{ end }}
     <p>
       Your browser does not support HTML5 video.

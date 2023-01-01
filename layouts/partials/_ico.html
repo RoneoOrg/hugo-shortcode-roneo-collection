@@ -31,7 +31,7 @@
     {{/*  {{ warnf "themeToFolder: %s" $theme }}  */}}
     {{/*  {{ warnf "folderFromTheme : %s" $folder }}  */}}
 
-    {{ $class = print $item " ico icon" }}
+    {{ $class = printf "%v%v%v" $theme " ico icon " $item }}
     {{ $path := printf "svg/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
     {{/*  {{ warnf "Loading icon from ico.html: %s" $item }}  */}}

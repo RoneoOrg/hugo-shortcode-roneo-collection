@@ -2,33 +2,35 @@
 
 
 
-## A shortcode collection for Hugo
+## Enhancing Hugo with a Shortcode collection
 
 
-### Icon Shortcode
+### Use inline SVG icons
 
-Easily insert icons in Hugo pages and templates.  
-More than 3000 open source SVG icons are available out-of-the-box.
+- Use 4000+ open source SVG icons with Hugo
+- Easily add your own icons and define custom CSS classes
+
+#### Screenshot
+
+![Inline SVG icons with this shortcode for Hugo](https://gitlab.com/Roneo/hugo-shortcode-roneo-collection/-/raw/main/img/svg-icons.png)  
 
 #### Usage
 
 As a shortcode:
 
     {{< ico moon >}}
-    {{< ico star solid >}}
 
-With named parameters:
-
-    {{< ico icon="star" >}}
-    {{< ico icon="star" theme="solid" >}}
+    {{< ico icon="star" theme="solid" class="red medium" >}}
 
 As a partial:
 
     {{ partial "ico" "star" }}
 
-### Embed audio file
+See this [release announcement](https://roneo.org/en/hugo-svg-icon-shortcode/) to learn more
 
-**Mission:** easily embed players from local and remote audio files
+### Embed audio files
+
+An elegant way to insert an audio player and share local and remote audio files.
 
 Usage:
 
@@ -55,17 +57,24 @@ Named parameters can be used too:
 {{< audio src="/audiofilename.mp3" caption="A custom comment" class="foo" preload="none" >}}
 ```
 
-This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
+This shortcode is based on [Plyr.io](https://plyr.io/), see [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
 
 
-### Embed multiple audio files from Archive.org
+### Customized notices and warning
 
 Usage:
 
-    {{< archive-audio "https://archive.org/details/heyamoli" >}}
+```
+{{< box info >}}
+  Incididunt labore eiusmod culpa eu nostrud tempor laborum consequat eiusmod excepteur.
+{{< /box >}}
+```
 
-Demo: See https://phoni.es/dev/v4/
+Screenshot:
 
+![Include custom messages in your posts with a Shortcode](https://roneo.org/illustrations/hugo-notices-shortcode-show-warning-message.en-img/20220914110145.jpg)
+
+See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shortcode/) for details.
 
 
 ### Embed video file
@@ -92,23 +101,7 @@ Named parameters can be used too:
 
 This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
 
-### Customized text blocks
-
-Usage:
-
-```
-{{< box info >}}
-  Incididunt labore eiusmod culpa eu nostrud tempor laborum consequat eiusmod excepteur.
-{{< /box >}}
-```
-
-Screenshot:
-
-![Include custom messages in your posts with a Shortcode](https://roneo.org/illustrations/hugo-notices-shortcode-show-warning-message.en-img/20220914110145.jpg)
-
-See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shortcode/) for details.
-
-
+<!-- 
 ### List Github stars
 
 **Mission**: Display a list of the last starred repositories on Github on your website. This list is automatically updated every time the website is rebuilt.
@@ -119,6 +112,17 @@ See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shor
 
 
 See [the demo](https://demo.roneo.app/hugo-fetch-github-api-shortcode/) for live examples and [the documentation](https://roneo.org/en/hugo-fetch-remote-data-github-api-shortcode/) for guidance.
+
+
+### Embed multiple audio files from Archive.org
+
+Usage:
+
+    {{< archive-audio "https://archive.org/details/heyamoli" >}}
+
+Demo: See https://phoni.es/dev/v4/
+
+ -->
 
 
 ## Installation

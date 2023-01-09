@@ -101,6 +101,23 @@ Named parameters can be used too:
 
 This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to set up with Hugo
 
+### Include a Markdown file into another
+
+The same content can be relevant in several places.  
+Here is how to include the same Markdown file in multiple pages.
+
+    {{% include "included-file-name.md" %}}
+
+Features:
+
+- Markdown content and Shortcodes are properly included and rendered
+- The Front Matter of included file is hidden
+- The filename is enough (no fullpath is required)
+
+Note that you may need to restart Hugo Server to see the changes in included files applied.
+
+See [these notes](https://roneo.org/en/hugo-include-another-file-with-a-shortcode/) for details
+
 <!-- 
 ### List Github stars
 

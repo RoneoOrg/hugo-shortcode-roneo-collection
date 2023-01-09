@@ -57,7 +57,7 @@ Named parameters can be used too:
 {{< audio src="/audiofilename.mp3" caption="A custom comment" class="foo" preload="none" >}}
 ```
 
-This shortcode is based on [Plyr.io](https://plyr.io/), see [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
+This shortcode is based on [Plyr.io](https://plyr.io/), see [this tutorial](https://roneo.org/en/hugo/plyr) to set up with Hugo
 
 
 ### Customized notices and warning
@@ -99,7 +99,7 @@ Named parameters can be used too:
 {{< video src="/test-file.mp4" caption="A custom comment"  poster="preview-image.jpg" class="foo" preload="none" >}}
 ```
 
-This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to setup with Hugo
+This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to set up with Hugo
 
 <!-- 
 ### List Github stars

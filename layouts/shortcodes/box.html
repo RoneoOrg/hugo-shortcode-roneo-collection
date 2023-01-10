@@ -11,7 +11,7 @@
 {{- if not ($.Page.Scratch.Get "box_count") -}}
 
   <style type="text/css">
-    .box {
+    .box-shortcode {
       padding: 1.6em;
       padding-top: 1.4em;
       line-height: 1.4em;
@@ -30,29 +30,29 @@
       color: #fff;
       background: #6ab0de;
     }
-    .box.warning .box-title {
+    .box-shortcode.warning .box-title {
       background: #ff6b6b;
     }
-    .box.warning {
+    .box-shortcode.warning {
       background: #ff6b6b4f;
     }
-    .box.info .box-title {
+    .box-shortcode.info .box-title {
       background: #0089e488;
     }
-    .box.info {
+    .box-shortcode.info {
       background: #0089e41c;
       box-shadow: 3px 3px 5px #0089e410;
     }
-    .box.important .box-title {
+    .box-shortcode.important .box-title {
       background: #f7ec2c;
     }
-    .box.important {
+    .box-shortcode.important {
       background: #f7ec2c7d;
     }
-    .box.tip .box-title {
+    .box-shortcode.tip .box-title {
       background: #a3ffa34d;
     }
-    .box.tip {
+    .box-shortcode.tip {
       background: #a3ffa34d;
       box-shadow: 3px 3px 5px #0089e410;
     }
@@ -72,16 +72,16 @@
       top: 0.125em;
       position: relative;
     }
-    .box p {
+    .box-shortcode. p {
       margin-bottom: 0.6em;
     }
-    .box p:first-of-type {
+    .box-shortcode. p:first-of-type {
       display: inline;
     }
-    .box p:nth-of-type(2) {
+    .box-shortcode. p:nth-of-type(2) {
       margin-top: 0.6em;
     }
-    .box p:last-child {
+    .box-shortcode. p:last-child {
       margin-bottom: 0;
     }
   </style>
@@ -110,7 +110,7 @@
 
 {{- $.Page.Scratch.Add "box_count" 1 -}}
 
-<div class="box {{ $boxType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
+<div class="box box-shortcode {{ $boxType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
     <span class="icon-box baseline">
       <svg><use href="#{{- $boxType -}}-box"></use></svg>
     </span>

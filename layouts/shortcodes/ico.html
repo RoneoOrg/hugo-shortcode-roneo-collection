@@ -9,36 +9,28 @@
 {{/* Count how many times we've called this shortcode and load the css if it's the first time */}}
 {{- if not ($.Page.Scratch.Get "ico_count") -}}
   <style>
-
       .ico {
-        height: 1em;
-        width: 1em;
+        height: 1.15em;
+        width: 1.15em;
         position: relative;
         top: 3px;
       }
-
-      {{/*  Provide multiple icon sizes  */}}
       .ico-sm .ico {
         height: .8em;
         width: .8em;
       }
-
       .ico-md .ico {
         height: 1.5em;
         width: 1.5em;
       }
-
       .ico-xl .ico {
         height: 2em;
         width: 2em;
       }
-
       .ico-xxl .ico {
         height: 3em;
         width: 3em;
       }
-
-
   </style>
 {{- end -}}
 {{- $.Page.Scratch.Add "ico_count" 1 -}}
@@ -54,14 +46,12 @@
     {{- $theme = (.Get 1 |  default "default") -}}
     {{- $class = .Get 2 -}}
     {{- $href = .Get 3 -}}
-{{- end }}
+{{- end -}}
 
-{{- if not $icon }}
+{{- if not $icon -}}
 {   {- errorf "Missing required 'icon'. Shortcode: 'ico'." -}}
-{{- end }}
-
-{{ with .Page.Resources.GetMatch $icon }}
+{{- end -}}
+{{- with .Page.Resources.GetMatch $icon }}
     {{ $icon = . }}
-{{ end }}
-
+{{ end -}}
 {{ partial "ico" (dict "icon" $icon "theme" $theme "class" $class "href" $href) }}

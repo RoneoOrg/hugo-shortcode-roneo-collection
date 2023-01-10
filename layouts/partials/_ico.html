@@ -3,7 +3,6 @@
 {{ $class := "" }}
 {{ $href := "" }}
 {{ $title := "" }}
-
 {{ if reflect.IsMap . }}
     {{ $item = .icon }}
     {{ $theme = .theme }}
@@ -13,43 +12,32 @@
   {{ else }}
     {{ $item = . }}
 {{ end }}
-
 {{ $theme := $theme | default "default" }}
 {{ $classes := "" }}
-
 {{/*  {{ warnf "themeAfterLoop: %s" $theme }}  */}}
-
 {{ $file := "" }}
-
 {{/*  ?? Check data type ? See https://www.brijumaquio.com/get-data-type-in-hugo-framework  */}}
 {{ if eq (printf "%T" $item) "*resources.resourceAdapter" }}
-
     {{ $file = $item }}
-
 {{ else if eq (printf "%T" $item) "string" }}
-
     {{ $folder := $theme }}
     {{/*  {{ warnf "themeToFolder: %s" $theme }}  */}}
     {{/*  {{ warnf "folderFromTheme : %s" $folder }}  */}}
-
     {{ $classes = printf "%v%v%v%v%v" $theme " ico ico-" $item " " $class }}
     {{ $path := printf "svg/%s/%s.svg" $folder $item }}
     {{ $file = resources.Get $path }}
     {{/*  {{ warnf "Loading icon from ico.html shortcode: %s" $item }}  */}}
     {{/*  {{ warnf "theme: %s" $theme }}  */}}
-
 {{ else }}
     {{/*  Get the filename, remove extension, add custom classes  */}}
     {{ $classes = print (replace (path.Base $item) ".svg" "" | anchorize) " ico " }}
     {{ $file = resources.Get $item }}
 {{ end }}
-
 {{ if eq $file nil }}
     {{ warnf "Error detected in ico shortcode: Icon not found: %s" $file }}
     {{ return }}
 {{ end }}
-
-{{ $content := replaceRE "<!--[\\s\\S]*-->" "" $file.Content }}
+{{- $content := replaceRE "<!--[\\s\\S]*-->" "" $file.Content -}}
 {{ $pattern := `[\s\S]*?<svg([\s\S]*)?>([\s\S]*)(<title>[\s\S]*</title>)?([\s\S]*)</svg>([\s\S]*)?` }}
 {{ $replaceWith := "" }}
 {{ with $title }}
@@ -57,4 +45,4 @@
 {{ else }}
     {{ $replaceWith = printf `<svg aria-hidden="true" class="%s" ${1}>${2}${3}${4}</svg>` $classes }}
 {{ end }}
-{{ return ($content | replaceRE $pattern $replaceWith | safeHTML) }}
+{{- return ($content | replaceRE $pattern $replaceWith | safeHTML) -}}

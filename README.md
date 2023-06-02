@@ -135,7 +135,7 @@ See [the demo](https://demo.roneo.app/hugo-fetch-github-api-shortcode/) for live
 
 Usage:
 
-    {{< archive-audio "https://archive.org/details/heyamoli" >}}
+    {{< audio-archive "https://archive.org/details/heyamoli" >}}
 
 Demo: See https://phoni.es/dev/v4/
 

@@ -35,6 +35,8 @@
 
     {{/*  Show Audio files only  */}}
     {{ if or (eq .format "VBR MP3") (eq .format "MPEG-4 Audio") }}
+    {{/*  Only MP3:  */}}
+    {{/*  {{ if eq .format "VBR MP3" }}  */}}
       <li>
         {{$path := print $root "/" $identifier "/" .name}}
         {{/*  <a href="{{ $path }}" target="_blank" aria-label="Download {{ index .name }}" download>{{ index .name }}</a>  */}}

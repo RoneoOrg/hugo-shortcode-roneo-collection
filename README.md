@@ -164,3 +164,10 @@ Please open an issue on [Github](https://github.com/RoneoOrg/hugo-shortcode-rone
 
 - [Hugo documentation about Theme Components](https://gohugo.io/hugo-modules/theme-components/)
 - Hugo documentation about [Shortcodes](https://gohugo.io/content-management/shortcodes/)
+
+## Related projects
+
+- [Hugo-leaflet: insert OSM Maps, Markers and Tracks](https://github.com/altrdev/hugo-leaflet)
+- [Hugo Attachment shortcode](https://oostens.me/posts/hugo-attachment-shortcode/)
+- [Hugo Tabs shortcode](https://oostens.me/posts/hugo-tabs-shortcode/)
+- [Hugo-cloak-email: hide email adresses from spammers](https://github.com/martignoni/hugo-cloak-email)

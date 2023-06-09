@@ -171,3 +171,5 @@ Please open an issue on [Github](https://github.com/RoneoOrg/hugo-shortcode-rone
 - [Hugo Attachment shortcode](https://oostens.me/posts/hugo-attachment-shortcode/)
 - [Hugo Tabs shortcode](https://oostens.me/posts/hugo-tabs-shortcode/)
 - [Hugo-cloak-email: hide email adresses from spammers](https://github.com/martignoni/hugo-cloak-email)
+- [Hugo Timeline Shortcode](https://metalblueberry.github.io/post/howto/2021-02-28_hugo_timeline_shortcode/)
+- [Add Plots With Hugo Shortcodes - Plotly](https://metalblueberry.github.io/post/howto/2019-11-23_add_plots_with_hugo_shortcodes/)

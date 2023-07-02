@@ -167,6 +167,7 @@ Please open an issue on [Github](https://github.com/RoneoOrg/hugo-shortcode-rone
 
 ## Related projects
 
+- [Awesome Hugo Shortcodes For Your Websites](https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/)
 - [Hugo-leaflet: insert OSM Maps, Markers and Tracks](https://github.com/altrdev/hugo-leaflet)
 - [Hugo Attachment shortcode](https://oostens.me/posts/hugo-attachment-shortcode/)
 - [Hugo Tabs shortcode](https://oostens.me/posts/hugo-tabs-shortcode/)

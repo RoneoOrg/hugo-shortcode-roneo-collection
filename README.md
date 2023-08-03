@@ -28,6 +28,8 @@ As a partial:
 
 See this [release announcement](https://roneo.org/en/hugo-svg-icon-shortcode/) to learn more
 
+----
+
 ### Embed audio files
 
 An elegant way to insert an audio player and share local and remote audio files.
@@ -59,6 +61,7 @@ Named parameters can be used too:
 
 This shortcode is based on [Plyr.io](https://plyr.io/), see [this tutorial](https://roneo.org/en/hugo/plyr) to set up with Hugo
 
+----
 
 ### Customized notices and warning
 
@@ -76,6 +79,7 @@ Screenshot:
 
 See the [demo and documentation](https://roneo.org/en/hugo-warning-messages-shortcode/) for details.
 
+----
 
 ### Embed video file
 
@@ -100,6 +104,30 @@ Named parameters can be used too:
 ```
 
 This shortcode is based on [Plyr.io](https://plyr.io/), see [the documentation](https://github.com/sampotts/plyr#features) to learn about the features and [this tutorial](https://roneo.org/en/hugo/plyr) to set up with Hugo
+
+----
+
+### Show Creative Commons icons
+
+Creative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works.
+
+Authors can give selected rights to others, with optional criterias.
+
+This Hugo Shortcode can be used to display icons depending on selected criterias.
+
+```
+{{< cc "by" >}}  
+{{< cc "by nc" >}}
+{{< cc "by-nc-sa" >}}
+```
+
+Will show
+
+![Creative commons shortcode for Hugo](https://roneo.org/illustrations/hugo-creative-commons-shortcode.png)
+
+The linked URL is adapted to point to the right Creative Commons license.
+
+----
 
 ### Include a Markdown file into another
 
@@ -141,6 +169,7 @@ Demo: See https://phoni.es/dev/v4/
 
  -->
 
+----
 
 ## Installation
 

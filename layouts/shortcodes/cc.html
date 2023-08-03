@@ -1,5 +1,7 @@
 {{/*  Source:https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
 
+{{ $options :=  (.Get 0) | default "by-nc-sa" }}
+
 <style>
   .license img {
     width: 24px;
@@ -11,9 +13,33 @@
   }
 </style>
 
-<a class="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-    <img src="https://creativecommons.org/images/deed/cc-logo.jpg" alt="Creative Commons logo" class="license-logo">
-    <img src="https://creativecommons.org/images/deed/by.png" alt="Creative Commons attribution logo" class="license-logo">
-    <img src="https://creativecommons.org/images/deed/nc.png" alt="Creative Commons Non Commercial logo" class="license-logo">
-    <img src="https://creativecommons.org/images/deed/sa.png" alt="Creative Commons Share Alike logo" class="license-logo">
+{{/*  Build the URL according to selected license options  */}}
+{{ $urlOptions := replace $options " " "-" }}
+{{ $url := printf "%v%v%v" "https://creativecommons.org/licenses/" $urlOptions "/4.0" }}
+
+
+<a class="license" href="{{ $url }}">
+
+    {{ with resources.Get  "/creative-commons-icons/cc.jpg" }}
+      <img src="{{ .RelPermalink }}" alt="Creative Commons logo" class="license-logo">
+    {{ end }}
+
+    {{ if in $options "by"}}
+      {{ with resources.Get  "/creative-commons-icons/by.jpg" }}
+        <img src="{{ .RelPermalink }}" alt="Creative Commons logo" class="license-logo">
+      {{ end }}
+    {{ end }}
+
+    {{ if in $options "nc"}}
+      {{ with resources.Get  "/creative-commons-icons/nc.jpg" }}
+        <img src="{{ .RelPermalink }}" alt="Creative Commons logo" class="license-logo">
+      {{ end }}
+    {{ end }}
+
+    {{ if in $options "sa"}}
+      {{ with resources.Get  "/creative-commons-icons/sa.jpg" }}
+        <img src="{{ .RelPermalink }}" alt="Creative Commons logo" class="license-logo">
+      {{ end }}
+    {{ end }}
+
  </a>

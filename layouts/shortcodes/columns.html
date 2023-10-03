@@ -5,18 +5,18 @@
   <style>
       div.splitbox {width:100%; overflow:auto;}
 
-      div.splitbox div.left {
+      div.splitbox div.column-left {
                     width:48%;
                     float:left;}
-      div.splitbox div.right {
+      div.splitbox div.column-right {
                     width:48%;
                     float:right;}
 
       @media only screen and (max-width: 600px) {
-      div.splitbox div.left {
+      div.splitbox div.column-left {
                     width:100%;
                     float:left;}
-      div.splitbox div.right {
+      div.splitbox div.column-right {
                     width:100%;
                     float:left;}
       }
@@ -25,4 +25,4 @@
 
 {{- $.Page.Scratch.Add "column_count" 1 -}}
 
-<div class="splitbox"><div class="left">
+<div class="splitbox"><div class="column-left">
